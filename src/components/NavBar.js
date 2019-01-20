@@ -1,11 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import logo from "../shopping-purse-icon.svg";
 
 export default class NavBar extends Component {
   render() {
     return (
-      <div>
-        <h3>Hello from NavBar</h3>
-      </div>
-    )
+      <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
+        <Link to="/">
+          <img src={logo} width="50" alt="store" className="navbar-brand" />
+        </Link>
+        <ul className="navbar-nav align-items-center">
+          <li className="nav-item ml-5">
+            <Link to="/" className="nav-link">
+              Products
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    );
   }
 }
