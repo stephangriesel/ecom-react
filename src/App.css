@@ -25,3 +25,7 @@ body {
 .text-bright {
   color:var(--lightBlue);
 }
+
+.font {
+  font-family: 'PT Sans', sans-serif;
+}

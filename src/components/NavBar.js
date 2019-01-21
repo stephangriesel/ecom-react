@@ -21,7 +21,7 @@ export default class NavBar extends Component {
         <Link to="/cart" className="ml-auto">
           <ButtonContainer>
             <span className="mr-2">
-            <i className="fas fa-cart-plus"> My Cart</i>
+            <i className="fas fa-cart-plus"><span className="font"> My Cart</span></i>
             </span>
           </ButtonContainer>
         </Link>
@@ -36,6 +36,7 @@ background:var(--mainBlue);
   color:var(--mainWhite) !important;
   font-size:1.3rem;
   text-transform:capitalize !important;
+  font-family: 'PT Sans', sans-serif !important;
 }
 `
 
