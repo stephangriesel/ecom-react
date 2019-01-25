@@ -34,19 +34,33 @@ export default class Details extends Component {
                 </div>
                 {/* Product Text */}
                 <div className="col-10 mx-auto col-md-6 my-3">
-                <h2>Model: {title}</h2>
-                <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                Made by: <span className="text-uppercase">{company}</span>
-                </h4>
-                <h4 className="text-blue">
-                Price: <span>$</span>{price}
-                </h4>
-                <p className="text-capitalize font-weight-bold mt-3 mb-0">More info about the product: 
-                </p>
-                {info}
+                  <h2>Model: {title}</h2>
+                  <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                    Made by: <span className="text-uppercase">{company}</span>
+                  </h4>
+                  <h4 className="text-blue">
+                    Price: <span>$</span>
+                    {price}
+                  </h4>
+                  <p className="text-capitalize font-weight-bold mt-3 mb-0">
+                    More info about the product:
+                  </p>
+                  <p className="text-muted lead">{info}</p>
+
+                  {/* Buttons */}
+                  <div>
+                    <Link to="/">
+                      <ButtonContainer>Back to Products</ButtonContainer>
+                    </Link>
+                    <ButtonContainer disabled={inCart?true:false} onClick={()=>{
+                      value.addToCart(id)
+                    }}
+                    >
+                    {inCart ? "InCart" : "Add To Cart"}
+                    </ButtonContainer>
+                  </div>
                 </div>
               </div>
-              {/* Product Info End */}
             </div>
           );
         }}
